@@ -67,10 +67,10 @@
                             {% block blog_post_list_post_metainfo %}
                                     <h6 class="post-meta">
                                         <!-- Allows you to have the user's name who wrote the blog post showing-->
-                                        {#           {% trans "Posted by" %}:#}
-                                        {#            {% with blog_post.user as author %}#}
-                                        {#            <a href="{% url "blog_post_list_author" author %}">{{ author.get_full_name|default:author.username }}</a>#}
-                                        {#            {% endwith %}#}
+                                                   {% trans "Posted by" %}:
+                                                    {% with blog_post.user as author %}
+                                                    <a href="{% url "blog_post_list_author" author %}">{{ author.get_full_name|default:author.username }}</a>
+                                                    {% endwith %}
                                         {% with blog_post.categories.all as categories %}
                                             {% if categories %}
                                             {% trans "in" %}
