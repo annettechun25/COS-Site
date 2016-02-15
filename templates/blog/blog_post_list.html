@@ -39,7 +39,7 @@
     <h1><strong>Blog</strong></h1>
     <p class="lead">Welcome to the COS blog. Have a look around and get updates from us and the rest of the world of Open Source Science.</p>
     <div class="row padding-bottom-10 holder">
-        <div class="col-md-5 col-md-offset-1">
+        <div class="col-md-6 col-md-offset-1">
         <!-- Blog Post List-->
             {% for blog_post in blog_posts.object_list %}
                 <!-- Post Title/Link-->
@@ -83,7 +83,7 @@
                                     </h6>
                             {% endblock %}
                             <!-- Beginning of content-->
-                            <div class="postContent">
+                            <div class="postContent" style="overflow:hidden;">
                                 {% block blog_post_list_post_content %}
                                         {{ blog_post.description_from_content|safe }}
                                 {% endblock %}
@@ -125,7 +125,7 @@
                 </div>
             {% endfor %}
         </div>
-        <div class="col-md-3 col-md-offset-2">
+        <div class="col-md-3 col-md-offset-1">
             <div class="row padding-bottom-10">
                 <div class="col-md-12">
                     <!--Sorts by Keyword-->
