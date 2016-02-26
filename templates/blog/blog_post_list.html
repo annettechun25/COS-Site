@@ -146,8 +146,16 @@
                     {% endblock %}
                 </div>
             </div>
-            <div class="row padding-bottom-10">
+        <div class="row padding-bottom-10">
                 <div class="col-md-12">
+                     <!--Shows categories-->
+                    {% block search_box %}
+                        {% search_form "blog.BlogPost" %}
+                    {% endblock %}
+                </div>
+            </div>
+            <div class="row padding-bottom-10">
+                <div class="col-md-12" style="margin-left:25px;">
                      <!--Shows categories-->
                     {% block blog_categories %}
                         {% blog_categories as categories %}
@@ -163,7 +171,7 @@
                 </div>
             </div>
             <div class="row padding-bottom-10">
-                <div class="col-md-12">
+                <div class="col-md-12" style="margin-left:25px;">
                     <!--Sorts by Month-->
                     {% block blog_months %}
                         {% blog_months as months %}
@@ -183,7 +191,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12" style="margin-left:25px;">
                     <!--Shows blog feeds-->
                     {% block blog_feeds %}
                         <h3>{% trans "Feeds" %}</h3>
