@@ -87,6 +87,7 @@
                  <a target="_blank" href="http://twitter.com/home?status={{ blog_post.short_url|urlencode }}%20{{ blog_post.title|urlencode }}"><img src="{% static 'img/icons/social/twitter.png' %}"></a>
 {#                <a target="_blank" href="http://facebook.com/sharer.php?u={{ request.build_absolute_uri }}&amp;t={{ blog_post.title|urlencode }}"><img src="{% static 'img/icons/social/facebook.png' %}"></a>#}
                 <a href="mailto:?body={{ blog_post.get_absolute_url }}"><img src="{% static 'img/icons/social/email.png' %}"></a>
+                <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ blog_post.get_absolute_url }}"><img src="{% static 'img/icons/social/linkedin.png' %}"></a>
 
              {% endblock %}
         </div>
