@@ -49,21 +49,21 @@
                 {% endif %}
             {% endblock %}
             <!-- Number of Comments -->
-            {% block blog_post_detail_commentlink %}
-            <p>
-                {% if blog_post.allow_comments %}
-                    {% if settings.COMMENTS_DISQUS_SHORTNAME %}
-                        (<a href="{{ blog_post.get_absolute_url }}#disqus_thread"
-                            data-disqus-identifier="{% disqus_id_for blog_post %}">{% spaceless %}
-                            {% trans "Comments" %}
-                        {% endspaceless %}</a>)
-                    {% else %}(<a href="#comments">{% spaceless %}
-                        {% blocktrans count comments_count=blog_post.comments_count %}{{ comments_count }} comment{% plural %}{{ comments_count }} comments{% endblocktrans %}
-                        {% endspaceless %}</a>)
-                    {% endif %}
-                {% endif %}
-            </p>
-            {% endblock %}
+{#            {% block blog_post_detail_commentlink %}#}
+{#            <p>#}
+{#                {% if blog_post.allow_comments %}#}
+{#                    {% if settings.COMMENTS_DISQUS_SHORTNAME %}#}
+{#                        (<a href="{{ blog_post.get_absolute_url }}#disqus_thread"#}
+{#                            data-disqus-identifier="{% disqus_id_for blog_post %}">{% spaceless %}#}
+{#                            {% trans "Comments" %}#}
+{#                        {% endspaceless %}</a>)#}
+{#                    {% else %}(<a href="#comments">{% spaceless %}#}
+{#                        {% blocktrans count comments_count=blog_post.comments_count %}{{ comments_count }} comment{% plural %}{{ comments_count }} comments{% endblocktrans %}#}
+{#                        {% endspaceless %}</a>)#}
+{#                    {% endif %}#}
+{#                {% endif %}#}
+{#            </p>#}
+{#            {% endblock %}#}
         </div>
     </div>
     <div class="row">
@@ -139,13 +139,13 @@
         </div>
     </div>
     <!-- Comments and new comments -->
-    <div class="row">
-        <div class="col-md-11 col-md-offset-1">
-            {% block blog_post_detail_comments %}
-                {% if blog_post.allow_comments %}{% comments_for blog_post %}{% endif %}
-            {% endblock %}
-        </div>
-    </div>
+{#    <div class="row">#}
+{#        <div class="col-md-11 col-md-offset-1">#}
+{#            {% block blog_post_detail_comments %}#}
+{#                {% if blog_post.allow_comments %}{% comments_for blog_post %}{% endif %}#}
+{#            {% endblock %}#}
+{#        </div>#}
+{#    </div>#}
 </div>
 {% endblock %}
 
