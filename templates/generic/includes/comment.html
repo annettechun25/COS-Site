@@ -14,7 +14,7 @@
                      <h4 class="media-heading">{{ comment.user_name }}
                  {% endif %}
                  <small class="timespan">
-                     {% blocktrans with sometime=comment.submit_date|timesince %}{{ sometime }} ago{% endblocktrans %}
+                     {% blocktrans with sometime=comment.submit_date %}{{ sometime }}{% endblocktrans %}
                  </small>
                  </h4>
                  <p>{{ comment.comment|comment_filter }}</p>
