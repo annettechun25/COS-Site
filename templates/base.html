@@ -80,11 +80,11 @@
                                 <i class="fa fa-angle-down"></i>
                             </a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="{% url 'about_mission' %}">Our Mission</a></li>
+                                <li><a href="/about_mission">Our Mission</a></li>
                                 <li><a href="{% url 'COS_Team' %}">Our Team</a></li>
                                 <li><a href="{% url 'about_sponsors' %}">Our Sponsors</a></li>
                                 <li><a href="{% url 'about_board' %}">Our Board</a></li>
-                                <li><a href="{% url 'about_partners' %}">Our Partners</a></li>
+                                <li><a href="/about_partners">Our Partners</a></li>
                             </ul>
                         </li>
                         <li role="presentation" class="dropdown {% if nav == 'service' %}active{% endif %}">
@@ -114,7 +114,7 @@
                         </li>
 
                         <li role="presentation" class="dropdown {% if nav == 'communities' %}active{% endif %}">
-                            <a href="{% url 'communities' %}">Communities</a></li>
+                            <a href="/communities">Communities</a></li>
                         <li role="presentation" class="dropdown {% if nav == 'news' %}active{% endif %}">
                             <a href="{% url 'news' %}">News</a>
                         </li>
